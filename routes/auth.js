@@ -1,34 +1,41 @@
 const router = require('express').Router()
 const User = require('../models/User')
 const passport = require('../helpers/passport')
+const sendMail = require ('../helpers/mailer').sendMail
 
 
-//signup
+//Sign Up
+
 router.get('/signup',(req, res, next)=>{
   res.render('auth/signup')
 })
 
-router.post('/signup',(req, res, next)=>{
-  const {username, email} = req.body
+router.post('/signup', (req, res, next) => {
   User.register(req.body, req.body.password)
-    .then(user=>{
-      welcomeMail(username, email)
-      res.redirect('/login')
-    }).catch(error=>{
-      res.render('auth/signup',{data:req.body,error})
-    })
+  .then(user => res.redirect('/login'))
+  .catch(error => next(error))
 })
 
-//login
+//Login
 
-router.get('/login', (req, res, next)=>{
+router.get ('/login',(req,res,next)=>{
   res.render('auth/login')
 })
 
-router.post('/login', passport.authenticate('local'), (req, res, next)=>{
-  const {username} = req.user
-  req.app.locals.user = req.user
-  res.redirect(`/users/${username}`)
+router.post('/login',passport.authenticate('local'),(req,res,next)=>{
+  res.redirect('/user/profile')
 })
 
 module.exports = router
+
+
+
+
+
+
+
+
+
+
+
+

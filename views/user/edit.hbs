@@ -1,0 +1,17 @@
+<h1>Edita tu perfil</h1>
+
+<form action="/user/edit" method="post" enctype="multipart/form-data">
+  <p>
+    Nombre de usuario:
+    <input name="username" type="text" value="{{username}}">
+  </p>
+  <p>
+    Posicion en el campo:
+    <input name="position" type="text" value ="{{position}}">
+  </p>
+  <p>
+    Foto de perfil
+    <input type="file" name="image" id="">
+  </p>
+  <button type = "submit"> Guardar</button>
+</form>
