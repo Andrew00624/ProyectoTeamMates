@@ -12,12 +12,15 @@ const userSchema = new Schema({
   password: String,
   position:String,
   photoURL:String,
-  role:{
-    type:String,
-    enum:['individual', 'equipo','organizador'],
-    default:'individual'
-  },
-  rating:[]
+  rating:[],
+  tournament:[{
+    type:Schema.Types.ObjectId,
+    ref:'Tournament'
+  }],
+  friendly:[{
+    type:Schema.Types.ObjectId,
+    ref:'FriendlyGame'
+  }]
 },{
   timestamps:{
     createdAt:"created_at",

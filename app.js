@@ -73,5 +73,8 @@ app.use('/', auth)
 const user = require('./routes/user')
 app.use('/user', user)
 
+const partidos = require('./routes/partidos')
+app.use('/partidos', partidos)
+
 
 module.exports = app;

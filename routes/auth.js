@@ -12,9 +12,12 @@ router.get('/signup',(req, res, next)=>{
 
 router.post('/signup', (req, res, next) => {
   User.register(req.body, req.body.password)
-  .then(user => res.redirect('/login'))
-  .catch(error => next(error))
+  .then(r=>{
+    sendMail(req.body.email,username)
+    res.redirect('/login')
+  }).catch(error => next(error))
 })
+
 
 //Login
 

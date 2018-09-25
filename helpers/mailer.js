@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport ({
 })
 
 
-exports.sendMail = (email,username,confimationCode)=>{
+exports.sendMail = (email,username)=>{
   transporter.sendMail({
     from:'Nueva App',
     to:email,
@@ -25,9 +25,6 @@ exports.sendMail = (email,username,confimationCode)=>{
         <h3>Hello ${username} </h3>
         
         <p>Thanks to join, please confirm your account clicking on the following link:</p>
-        
-        
-        <a href='http://localhost:3000/auth/confirm/${confimationCode}'>http://localhost:3000/auth/confirm/${confimationCode}</a>
         
         <h2>Great to see you creating awesome webpages with us ! :)</h2>`
   })

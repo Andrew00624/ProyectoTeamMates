@@ -5,10 +5,15 @@ const plm = require('passport-local-mongoose')
 
 const tournamentSchema = new Schema({
   title:String,
+  owner:[{
+    type:Schema.Types.ObjectId,
+    ref:'User'
+  }],
   photoURL:String,
   description:String,
   rules:String,
   prize:String,
+  price:String,
   schedule:String,
   comments:String,
   participants:[{
@@ -21,3 +26,4 @@ const tournamentSchema = new Schema({
 })
 
 module.exports = mongoose.model('Tournament', tournamentSchema)
+
