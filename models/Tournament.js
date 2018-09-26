@@ -17,6 +17,8 @@ const tournamentSchema = new Schema({
   schedule:String,
   comments:String,
   participants:[{
+    type:Schema.Types.ObjectId,
+    ref:'User'
   }]
 },{
   timestamps:{
