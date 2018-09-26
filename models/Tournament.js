@@ -5,10 +5,10 @@ const plm = require('passport-local-mongoose')
 
 const tournamentSchema = new Schema({
   title:String,
-  owner:[{
+  owner:{
     type:Schema.Types.ObjectId,
     ref:'User'
-  }],
+  },
   photoURL:String,
   description:String,
   rules:String,

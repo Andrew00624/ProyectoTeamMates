@@ -13,11 +13,10 @@ router.get('/signup',(req, res, next)=>{
 router.post('/signup', (req, res, next) => {
   User.register(req.body, req.body.password)
   .then(r=>{
-    sendMail(req.body.email,username)
+    sendMail(req.body.email,r.username)
     res.redirect('/login')
   }).catch(error => next(error))
 })
-
 
 //Login
 
