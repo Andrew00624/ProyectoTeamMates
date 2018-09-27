@@ -1,79 +1,68 @@
 body {
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
-  margin:0px;
-}
+  margin: 0px; }
 
 html {
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 a {
   color: #f7bf34;
-  text-decoration:none;
-  font-weight :600;
-}
-p{
-  font-size:16px;
-  line-height:22px;
-}
+  text-decoration: none;
+  font-weight: 600; }
 
-h1,h2,h3,h4 {
+p {
+  font-size: 16px;
+  line-height: 22px; }
+
+h1, h2, h3, h4 {
   font-family: 'Exo', sans-serif;
-  margin-top:0px;
-}
+  margin-top: 0px; }
 
-h1{
+h1 {
   font-size: 65px;
   font-style: italic;
   font-weight: 600;
-  margin:0px;
-}
-h2{
-  font-size:48px;
+  margin: 0px; }
+
+h2 {
+  font-size: 48px;
   font-style: italic;
-  font-weight: 600;
-}
-h3{
-  font-size:36px;
-}
+  font-weight: 600; }
+
+h3 {
+  font-size: 36px; }
 
 nav li {
   list-style: none;
   display: inline-flex;
   margin: 0 15px;
   color: #fff;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 nav {
   text-align: right;
-  margin: 15px 0;
-}
+  margin: 15px 0; }
 
 .social-media {
   color: #fff;
   text-align: right;
-  margin: 0 10px;
-}
-.social-media i {
-  margin: 0 5px;
-}
+  margin: 0 10px; }
 
-.container{
-  width:1400px;
-  margin:0 auto;
-}
+.social-media i {
+  margin: 0 5px; }
+
+.container {
+  width: 1400px;
+  margin: 0 auto; }
 
 .logo img {
-  width: 280px;
-}
+  width: 280px; }
 
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 35px;
-}
+  padding-top: 35px; }
 
 .hero {
   position: absolute;
@@ -83,19 +72,17 @@ nav {
   bottom: 50%;
   width: 800px;
   margin: 0 auto;
-  text-align: center;
-}
-.hero h1, .hero p,.sign-up-container h1,.sign-up-container p {
-  color: #fff;
-}
+  text-align: center; }
+
+.hero h1, .hero p, .sign-up-container h1, .sign-up-container p {
+  color: #fff; }
+
 .hero span, .sign-up-container span {
-  color:#f7bf34;
-}
+  color: #f7bf34; }
 
 .hero img {
   background-size: cover;
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; }
 
 button {
   background: #f7bf34;
@@ -104,22 +91,18 @@ button {
   padding: 15px 30px;
   font-size: 18px;
   font-weight: 700;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-button a,button a:hover {
+button a, button a:hover {
   color: #2b3b55;
-  text-decoration:none;
-
-}
+  text-decoration: none; }
 
 #homepage-background {
   position: relative;
   background-image: url(/images/background.jpg);
-  background-size:cover;
+  background-size: cover;
   height: 100vh;
-  background-position: 50% 50%;
-}
+  background-position: 50% 50%; }
 
 i.fas.fa-arrow-down {
   position: absolute;
@@ -128,8 +111,7 @@ i.fas.fa-arrow-down {
   bottom: 40px;
   text-align: center;
   font-size: 40px;
-  color: #fff;
-}
+  color: #fff; }
 
 #registrarse {
   position: relative;
@@ -137,121 +119,95 @@ i.fas.fa-arrow-down {
   background-size: contain;
   background-repeat: no-repeat;
   height: auto;
-  min-height:500px;
-}
+  min-height: 500px; }
 
 .registro-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   width: 1400px;
-    margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .registro-container img {
-  width:550px;
-}
+  width: 550px; }
 
 .registro-content h2 {
-  color: #f7bf34;
-}
+  color: #f7bf34; }
 
 .player {
-  flex:3;
-  margin: 40px;
-}
+  flex: 3;
+  margin: 40px; }
 
 .registro-content {
-  flex:4;
-    width: 300px;
-    text-align: center;
-    padding: 0 0 60px 0;
-}
+  flex: 4;
+  width: 300px;
+  text-align: center;
+  padding: 0 0 60px 0; }
 
-#funcionamiento{
+#funcionamiento {
   background: #172233;
-  min-height:300px;
-  height:auto;
-  margin-top:-28px;
+  min-height: 300px;
+  height: auto;
+  margin-top: -28px;
   padding: 90px 0 90px 0;
-  text-align:center;
-}
+  text-align: center; }
 
 #funcionamiento h2 {
-  color: #f7bf34;
-}
+  color: #f7bf34; }
+
 #funcionamiento p {
-  color: #fff;
-}
+  color: #fff; }
 
 .info {
   width: 250px;
-  height:200px;
-  background: #fff;
-}
+  height: 200px;
+  background: #fff; }
 
 .funcion-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
-}
+  padding: 30px; }
 
-footer{
-  background:#f7bf34;
-  padding:10px 0;
-}
+footer {
+  background: #f7bf34;
+  padding: 10px 0; }
 
 #map {
   width: 100%;
-  height:400px;
-}
+  height: 400px; }
 
-// Rating
-.stars{
-  display: inline-block;  
+.stars {
+  display: inline-block;
   position: relative;
-  font-size: 30px;
-  
-  &:before{    
-    content: '\2606\2606\2606\2606\2606';
-  }
-}
+  font-size: 30px; }
+  .stars:before {
+    content: '\2606\2606\2606\2606\2606'; }
 
-.rank{
+.rank {
   position: absolute;
   overflow: hidden;
   top: 0;
   left: 0;
-  z-index: 1;
-  
-  &:after{
+  z-index: 1; }
+  .rank:after {
     content: '\2605\2605\2605\2605\2605';
-    color: #f7bf34;    
-  }
-}
+    color: #f7bf34; }
 
-.score{
+.score {
   font-size: 50%;
   font-weight: bold;
-  text-align: left;
-}
+  text-align: left; }
 
-
-// Sign up & Login
-
-
-#sign-up,#login {
+#sign-up, #login {
   background: #1e2d42bd;
-  padding: 40px;
-}
+  padding: 40px; }
 
 input {
   padding: 13px;
   width: 70%;
-  border: 1px solid #c1c1c1;
-}
+  border: 1px solid #c1c1c1; }
 
 .sign-up-container {
   position: absolute;
@@ -261,19 +217,14 @@ input {
   bottom: 50%;
   width: 800px;
   margin: 0 auto;
-  text-align: center;
-}
-
-
-// Inner pages hero
+  text-align: center; }
 
 #innerpages-hero {
   position: relative;
   background-image: url(/images/background.jpg);
-  background-size:cover;
+  background-size: cover;
   height: 450px;
-  background-position: 50% 50%;
-}
+  background-position: 50% 50%; }
 
 .inner-title {
   position: absolute;
@@ -281,16 +232,11 @@ input {
   right: 0;
   text-align: center;
   top: 40%;
-  bottom: 50%;
-}
+  bottom: 50%; }
 
 .inner-title h1 {
-  color:#fff;
-  text-transform: capitalize;
-}
-
-
-// Profile
+  color: #fff;
+  text-transform: capitalize; }
 
 #profile {
   position: relative;
@@ -298,8 +244,7 @@ input {
   background-size: contain;
   background-repeat: no-repeat;
   height: auto;
-  padding: 80px 0;
-}
+  padding: 80px 0; }
 
 #profile-edit {
   position: relative;
@@ -307,83 +252,71 @@ input {
   background-size: contain;
   background-repeat: no-repeat;
   height: auto;
-  padding: 80px 0;
-}
+  padding: 80px 0; }
 
 .profile-container {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   width: 1400px;
-    margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .profile-edit-container {
   width: 1200px;
   margin: 0 auto;
   text-align: center;
-  display: block;
-}
+  display: block; }
+
 .profile-img {
-  flex: 4;
-}
+  flex: 4; }
 
 .profile-img img {
   width: 250px;
   border-radius: 70%;
   height: 238px;
   border: 8px solid #fff;
-  margin-left: 50px;
-}
+  margin-left: 50px; }
 
 .profile-info {
-  flex: 3;
+  flex: 3; }
 
-}
 .profile-games {
-  flex: 3;
-}
+  flex: 3; }
 
-#profile-buttons{
-  height:auto;
-  min-height:350px;
-  background: #172233;
+#profile-buttons {
+  height: auto;
+  min-height: 350px;
+  background: #172233; }
 
-}
-
-.profile-buttons{
+.profile-buttons {
   display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
+  justify-content: center;
+  align-items: flex-start; }
 
 .button-text {
   position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
-    top: 0px;
-    z-index: 1;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-}
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0px;
+  z-index: 1;
+  bottom: 0;
+  height: 100%;
+  width: 100%; }
 
 .button-text h2 {
-  color:#fff;
+  color: #fff;
   margin-top: 30%;
-    margin-bottom: 30%;
-}
+  margin-bottom: 30%; }
+
 .button-text h2 span {
-  color:#f7bf34;
-}
+  color: #f7bf34; }
 
-.button-1,.button-2,.button-3 {
-  position: relative;
-}
+.button-1, .button-2, .button-3 {
+  position: relative; }
 
-.button-1:after,.button-2:after,.button-3:after {
+.button-1:after, .button-2:after, .button-3:after {
   position: absolute;
   content: "";
   opacity: 0.7;
@@ -392,26 +325,23 @@ input {
   right: 0;
   bottom: 0;
   background: #172233;
-  z-index: 0;
-}
+  z-index: 0; }
 
-#banner-list{
+#banner-list {
   background: #172233;
   min-height: 95px;
   height: auto;
   margin-top: -28px;
   padding: 20px;
-  text-align: center;
-}
+  text-align: center; }
 
 .table .thead-dark th {
   color: #fff;
   background-color: #172233;
-  border-color: #172233;
-}
-
+  border-color: #172233; }
 
 .form-width {
   width: 50%;
-  float: left;
-}
+  float: left; }
+
+/*# sourceMappingURL=style.css.map */

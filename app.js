@@ -8,6 +8,8 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const session = require('express-session')
+const passport = require('./helpers/passport')
 
 
 mongoose
@@ -24,10 +26,22 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 
 const app = express();
 
+
+//session
+app.use(session({
+  secret:'s3cr3t',
+  resave:true,
+  saveUninitialized:true
+}))
+
+//passport
+app.use(passport.initialize())
+app.use(passport.session())
+
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // Express View engine setup
@@ -50,9 +64,17 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.locals.title = 'Express - Generated with IronGenerator';
 
 
-
 const index = require('./routes/index');
 app.use('/', index);
+
+const auth = require('./routes/auth')
+app.use('/', auth)
+
+const user = require('./routes/user')
+app.use('/user', user)
+
+const partidos = require('./routes/partidos')
+app.use('/partidos', partidos)
 
 
 module.exports = app;

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Exo:400,400i,600,600i,700,700i" rel="stylesheet">
+  <title>{{title}}</title>
+</head>
+<div>
+
+<div id ="innerpages-hero">
+  <div class="container">
+    <div class="social-media">
+          <span><i class="fab fa-facebook-f"></i></span>
+          <span><i class="fab fa-twitter"></i></span>
+          <span><i class="fab fa-instagram"></i></span>
+      </div>
+      <div id="header">
+          <div class="logo">
+              <img src="/images/Logo.png" alt="">
+          </div>
+<nav>
+  <ul>
+    <li>Nosotros</li>
+    <li>Como funciona?</li>
+    <li>Preguntas frecuentes</li>
+    <li>Contacto</li>
+    <li>Login</li>
+  </ul>
+</nav>
+</div>
+<div class="inner-title">
+ <h1>Proximos Amistosos</h1> 
+</div>
+</div>
+  </div>
+</div>
+
+<section id="profile">
+<div class="profile-container">
+
+  <div class="cup-img">
+    <img src="/images/player2.png" alt="" style="width: 330px;">
+  </div>
+  <div class="profile-info">
+
+  <table class="table">
+  <thead class="thead-dark">
+      <tr>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Ver mas</th>
+      </tr>
+    </thead>
+    <tbody>
+  {{#each friendly}}
+  <tr>
+    <th scope="row">{{this.title}}</th>
+    <td>{{this.date}}</td>
+    <td>{{this.time}}</td>
+    <td><a href="/partidos/detalle-amistoso/{{this.id}}">Detalles</a></td>
+  </tr>
+  {{/each}} 
+  </tbody>
+  </table>
+  </div>  
+</div>
+</section>
+
+
+<section id="banner-list">
+<div>
+
+</div>
+
+</section>
+
+<footer>
+  <div>
+<nav>
+  <ul>
+    <li>Nosotros</li>
+    <li>Como funciona?</li>
+    <li>Preguntas frecuentes</li>
+    <li>Contacto</li>
+    <li>Login</li>
+  </ul>
+</nav>
+</div>
+</footer>
+
+
+
+
+
+
+
