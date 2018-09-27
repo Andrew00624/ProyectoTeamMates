@@ -295,7 +295,7 @@ input {
 
 .profile-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start; }
 
 .button-text {
