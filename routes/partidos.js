@@ -62,7 +62,7 @@ router.get('/amistosos',(req, res, next)=>{
 router.get("/detalle-torneo/:id",(req,res,next)=>{
   const {id} = req.params
   const {user} = req
-  Tournament.findById(id)
+  Tournament.findById(id).populate('participants')
   .then(tournament=>{
     res.render("partidos/detalle-torneo",tournament)
   }).catch(e=>next(e))

@@ -46,7 +46,7 @@
     <img src="{{photoURL}}" alt="">
   </div>
   <div class="profile-info">
-    <a href="/user/edit"> Agregar foto y editar perfil</a>
+    <div><a href="/user/edit"> Agregar foto y editar perfil</a></div> <br/>
     <h4>Nombre de usuario:</h4>
     <p>{{username}}</p>
     <h4>Posicion en la que juegas:</h4>
@@ -58,10 +58,12 @@
     </div>
   </div>  
   <div class="profile-games">
-    <h4>Juegos Activos</h4>
-    <li>Torneo Ironhack 2018</li>
-    <li>Copa Empresarial</li>
-    <li>Amistoso Semanal</li>
+    <h4>Proximos Partidos</h4>
+    {{#each this.tournament}}
+       <ul>
+         <li> <a href="/partidos/detalle-torneo/{{this.id}}">{{this.title}}</li></a>
+       </ul> 
+    {{/each}}
   </div>
 
 </div>

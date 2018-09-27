@@ -5,7 +5,7 @@ const uploadCloud = require('../helpers/cloudinary')
 // Perfil
 
 router.get('/profile', (req, res, next)=>{
-  User.findById(req.user._id)
+  User.findById(req.user._id).populate('tournament')
     .then(user=>{
       res.render('user/profile',user)
     }).catch(e=>next(e))

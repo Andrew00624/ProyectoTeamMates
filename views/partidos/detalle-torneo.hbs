@@ -54,9 +54,11 @@
     <p>{{this.location.address}}</p>
     <h4>Valor de inscripcion:</h4>
     <p>${{this.price}}</p>
+    <form action="/partidos/detalle-torneo/{{this._id}}" method="POST">
+        <button type="submit">Registrarse</button> 
+    </form>
   </div>  
   <div class="profile-games">
-    <h3>Informacion Importante</h3>
     <h4>Reglas</h4>
     <p>{{this.rules}}</p>
     <h4>Premio al ganador</h4>
@@ -66,10 +68,10 @@
     <h4>Hora</h4>
     <p>{{this.time}}</p>
     <h4>Participantes</h4>
-    <p>{{this.participants}}</p>
-    <form action="/partidos/detalle-torneo/{{this._id}}" method="POST">
-        <button type="submit">Registrarse</button> 
-    </form>
+    
+    {{#each this.participants}}
+      <span>  <a href="/user/profile/{{this.id}}"> {{this.username}},</span></a>
+    {{/each}}
   </div>
 </div>
 </section>
