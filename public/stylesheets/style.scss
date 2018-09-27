@@ -85,9 +85,15 @@ nav {
   margin: 0 auto;
   text-align: center;
 }
-.hero h1, .hero p,.sign-up-container h1,.sign-up-container p {
+.hero h1, .hero p,.sign-up-container h1,.sign-up-container p,.hero h3 {
   color: #fff;
 }
+
+.hero h3{
+  font-weight: 300;
+  font-size:30px;
+}
+
 .hero span, .sign-up-container span {
   color:#f7bf34;
 }
