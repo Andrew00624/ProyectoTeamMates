@@ -17,7 +17,7 @@ router.post('/torneoNew', (req, res, next) => {
   .then(tournament => {
     User.findByIdAndUpdate(req.user._id,{$push:{tournament:tournament._id}})
     .then(user=>{
-      res.redirect('/partidos/juegos')
+      res.redirect('/partidos/torneos')
     })
   }).catch(error => next(error))
 })
@@ -34,29 +34,30 @@ router.post('/amistosoNew', (req, res, next) => {
   .then(friendly => {
     User.findByIdAndUpdate(req.user._id,{$push:{friendly:friendly._id}})
     .then(user=>{
-      res.redirect('/partidos/juegos')
+      res.redirect('/partidos/amistosos')
     })
   }) .catch(error => next(error))
 })
 
-// Lista de juegos 
-router.get('/juegos',(req, res, next)=>{
+
+// Lista de torneos 
+router.get('/torneos',(req, res, next)=>{
   Tournament.find({})
     .then(tournament => {
-      res.render('partidos/juegos', {tournament})
+      res.render('partidos/torneos', {tournament})
     }) .catch(error => next(error))
 })
 
-// Lista de juegos 
-router.get('/juegos',(req, res, next)=>{
+// Lista de Amistosos 
+router.get('/amistosos',(req, res, next)=>{
   FriendlyGame.find({})
   .then(friendly => {
-    res.render('partidos/juegos', {friendly})
+    res.render('partidos/amistosos', {friendly})
   }) .catch(error => next(error))
 })
 
 
-// Detail
+// Detail Torneos
 
 router.get("/detalle-torneo/:id",(req,res,next)=>{
   const {id} = req.params
@@ -67,15 +68,44 @@ router.get("/detalle-torneo/:id",(req,res,next)=>{
   }).catch(e=>next(e))
  })
 
+
+ // Detail Amistosos
+
+ router.get("/detalle-amistoso/:id",(req,res,next)=>{
+  const {id} = req.params
+  const {user} = req
+  FriendlyGame.findById(id)
+  .then(Friendly=>{
+    res.render("partidos/detalle-amistoso",Friendly)
+  }).catch(e=>next(e))
+ })
+
+
+ // Participantes Torneos
+
  router.post('/detalle-torneo/:id', (req, res) => {
   const {_id} = req.user
   console.log()
   Tournament.findByIdAndUpdate(req.params.id, {$push:{participants: _id}}, {new:true})
   .then(tournament => {
     console.log(tournament)
-      res.redirect('/partidos/juegos')
+      res.redirect('/partidos/torneos')
   }).catch(error => next(error))
    
  })
+
+// Participantes Amistosos
+
+ router.post('/detalle-amistoso/:id', (req, res) => {
+  const {_id} = req.user
+  console.log()
+  FriendlyGame.findByIdAndUpdate(req.params.id, {$push:{participants: _id}}, {new:true})
+  .then(friendly => {
+    console.log(friendly)
+      res.redirect('/partidos/amistosos')
+  }).catch(error => next(error))
+   
+ })
+
 
 module.exports = router

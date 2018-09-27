@@ -15,6 +15,7 @@ const tournamentSchema = new Schema({
   prize:String,
   price:String,
   schedule:String,
+  time:String,
   location:{
     type:{
       type:String,

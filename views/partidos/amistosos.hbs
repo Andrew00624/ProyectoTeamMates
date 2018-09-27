@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/style.css">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Exo:400,400i,600,600i,700,700i" rel="stylesheet">
@@ -33,7 +34,7 @@
 </nav>
 </div>
 <div class="inner-title">
- <h1>{{{this.title}}}</h1> 
+ <h1>Proximos Amistosos</h1> 
 </div>
 </div>
   </div>
@@ -46,36 +47,31 @@
     <img src="/images/cup.png" alt="">
   </div>
   <div class="profile-info">
-    <h4>Nombre del Torneo:</h4>
-    <p>{{this.title}}</p>
-    <h4>Descripcion:</h4>
-    <p>{{this.description}}</p>
-    <h4>Direccion:</h4>
-    <p>{{this.location.address}}</p>
-    <h4>Valor de inscripcion:</h4>
-    <p>${{this.price}}</p>
+
+  <table class="table">
+  <thead class="thead-dark">
+      <tr>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Ver mas</th>
+      </tr>
+    </thead>
+    <tbody>
+  {{#each friendly}}
+  <tr>
+    <th scope="row">{{this.title}}</th>
+    <td>{{this.date}}</td>
+    <td>{{this.time}}</td>
+    <td><a href="/partidos/detalle-amistoso/{{this.id}}">Detalles</a></td>
+  </tr>
+  {{/each}} 
+  </tbody>
+  </table>
   </div>  
-  <div class="profile-games">
-    <h3>Informacion Importante</h3>
-    <h4>Reglas</h4>
-    <p>{{this.rules}}</p>
-    <h4>Premio al ganador</h4>
-    <p>{{this.prize}}</p>
-    <h4>Fecha de inicio</h4>
-    <p>{{this.schedule}}</p>
-    <h4>Participantes</h4>
-    <p>{{this.participants}}</p>
-    <form action="/partidos/detalle-torneo/{{this._id}}" method="POST">
-        <button type="submit">Registrarse</button> 
-    </form>
-  </div>
 </div>
 </section>
-<div id="profile-buttons">
-  <div class="profile-buttons">
-   <div id="map"></div>
-  </div>
-</div>
+
 <footer>
   <div>
 <nav>
@@ -89,40 +85,6 @@
 </nav>
 </div>
 </footer>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJuHH2jP3PIpI1FVuWijujzw41ZrVgPwU"></script>
-<script>
-
-function map (){
-  const map = new google.maps.Map((
-    document.getElementById('map')
-  ),
-  {
-    zoom:15,
-    center:{
-      lat:{{location.coordinates.[1]}},
-      lng:{{location.coordinates.[0]}}
-    }
-  })
-  var image = {
-    url: "/images/marker.png",
-    scaledSize:new google.maps.Size (50,50)
-  }
-  const marker = new google.maps.Marker({
-    map:map,
-    position:{
-      lat:{{location.coordinates.[1]}},
-      lng:{{location.coordinates.[0]}}
-    },
-    animation:google.maps.Animation.BOUNCE,
-    icon: image
-  })
-}
-
-map()
-
-</script>
-</body>
-</html>
 
 
 

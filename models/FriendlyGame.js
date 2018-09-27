@@ -13,6 +13,16 @@ const friendlyGameSchema = new Schema({
   rules:String,
   date:String,
   time:String,
+  location:{
+    type:{
+      type:String,
+      default:'point'
+    },
+    address:String,
+    coordinates:[{
+      type:Number
+    }]
+  },
   comments:String,
   participants:[{
     type:Schema.Types.ObjectId,

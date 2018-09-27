@@ -1,5 +1,6 @@
 body {
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin:0px;
 }
 
 html {
@@ -7,7 +8,9 @@ html {
 }
 
 a {
-  color: #00B7FF;
+  color: #f7bf34;
+  text-decoration:none;
+  font-weight :600;
 }
 p{
   font-size:16px;
@@ -16,12 +19,14 @@ p{
 
 h1,h2,h3,h4 {
   font-family: 'Exo', sans-serif;
+  margin-top:0px;
 }
 
 h1{
   font-size: 65px;
   font-style: italic;
   font-weight: 600;
+  margin:0px;
 }
 h2{
   font-size:48px;
@@ -54,7 +59,7 @@ nav {
   margin: 0 5px;
 }
 
-#container{
+.container{
   width:1400px;
   margin:0 auto;
 }
@@ -80,10 +85,10 @@ nav {
   margin: 0 auto;
   text-align: center;
 }
-.hero h1, .hero p {
+.hero h1, .hero p,.sign-up-container h1,.sign-up-container p {
   color: #fff;
 }
-.hero span {
+.hero span, .sign-up-container span {
   color:#f7bf34;
 }
 
@@ -94,7 +99,7 @@ nav {
 
 button {
   background: #f7bf34;
-  color: #fff;
+  color: #2b3b55;
   border: none;
   padding: 15px 30px;
   font-size: 18px;
@@ -125,7 +130,6 @@ i.fas.fa-arrow-down {
   font-size: 40px;
   color: #fff;
 }
-
 
 #registrarse {
   position: relative;
@@ -162,13 +166,14 @@ i.fas.fa-arrow-down {
   flex:4;
     width: 300px;
     text-align: center;
+    padding: 0 0 60px 0;
 }
 
 #funcionamiento{
   background: #172233;
   min-height:300px;
   height:auto;
-  margin-top:-10px;
+  margin-top:-28px;
   padding: 90px 0 90px 0;
   text-align:center;
 }
@@ -204,10 +209,7 @@ footer{
 }
 
 // Rating
-
-
 .stars{
-  border: 1px dashed gold;
   display: inline-block;  
   position: relative;
   font-size: 30px;
@@ -226,12 +228,184 @@ footer{
   
   &:after{
     content: '\2605\2605\2605\2605\2605';
-    color: gold;    
+    color: #f7bf34;    
   }
 }
 
 .score{
   font-size: 50%;
   font-weight: bold;
+  text-align: left;
+}
+
+
+// Sign up & Login
+
+
+#sign-up,#login {
+  background: #1e2d42bd;
+  padding: 40px;
+}
+
+input {
+  padding: 13px;
+  width: 50%;
+  border: 1px solid #c1c1c1;
+}
+
+.sign-up-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+  bottom: 50%;
+  width: 800px;
+  margin: 0 auto;
   text-align: center;
+}
+
+
+// Inner pages hero
+
+#innerpages-hero {
+  position: relative;
+  background-image: url(/images/background.jpg);
+  background-size:cover;
+  height: 450px;
+  background-position: 50% 50%;
+}
+
+.inner-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 40%;
+  bottom: 50%;
+}
+
+.inner-title h1 {
+  color:#fff;
+  text-transform: capitalize;
+}
+
+
+// Profile
+
+#profile {
+  position: relative;
+  background-image: url(/images/section1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: auto;
+  padding: 80px 0;
+}
+
+#profile-edit {
+  position: relative;
+  background-image: url(/images/section1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: auto;
+  padding: 80px 0;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap:wrap;
+  width: 1400px;
+    margin: 0 auto;
+}
+
+.profile-edit-container {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+.profile-img {
+  flex: 4;
+}
+
+.profile-img img {
+  width: 250px;
+  border-radius: 70%;
+  height: 238px;
+  border: 8px solid #fff;
+  margin-left: 50px;
+}
+
+.profile-info {
+  flex: 3;
+
+}
+.profile-games {
+  flex: 3;
+}
+
+#profile-buttons{
+  height:auto;
+  min-height:350px;
+  background: #172233;
+
+}
+
+.profile-buttons{
+  display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.button-text {
+  position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 0px;
+    z-index: 1;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.button-text h2 {
+  color:#fff;
+  margin-top: 30%;
+    margin-bottom: 30%;
+}
+.button-text h2 span {
+  color:#f7bf34;
+}
+
+.button-1,.button-2,.button-3 {
+  position: relative;
+}
+
+.button-1:after,.button-2:after,.button-3:after {
+  position: absolute;
+  content: "";
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #172233;
+  z-index: 0;
+}
+
+#banner-list{
+  background: #172233;
+  min-height:200px;
+  height:auto;
+  margin-top:-28px;
+  padding: 90px 0 90px 0;
+  text-align:center;
+}
+
+.table .thead-dark th {
+  color: #fff;
+  background-color: #172233;
+  border-color: #172233;
 }
