@@ -249,7 +249,7 @@ footer{
 
 input {
   padding: 13px;
-  width: 50%;
+  width: 70%;
   border: 1px solid #c1c1c1;
 }
 
@@ -397,15 +397,21 @@ input {
 
 #banner-list{
   background: #172233;
-  min-height:200px;
-  height:auto;
-  margin-top:-28px;
-  padding: 90px 0 90px 0;
-  text-align:center;
+  min-height: 95px;
+  height: auto;
+  margin-top: -28px;
+  padding: 20px;
+  text-align: center;
 }
 
 .table .thead-dark th {
   color: #fff;
   background-color: #172233;
   border-color: #172233;
+}
+
+
+.form-width {
+  width: 50%;
+  float: left;
 }

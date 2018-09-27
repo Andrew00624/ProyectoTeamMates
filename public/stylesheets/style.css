@@ -206,7 +206,7 @@ footer {
 
 input {
   padding: 13px;
-  width: 50%;
+  width: 70%;
   border: 1px solid #c1c1c1; }
 
 .sign-up-container {
@@ -329,15 +329,19 @@ input {
 
 #banner-list {
   background: #172233;
-  min-height: 200px;
+  min-height: 95px;
   height: auto;
   margin-top: -28px;
-  padding: 90px 0 90px 0;
+  padding: 20px;
   text-align: center; }
 
 .table .thead-dark th {
   color: #fff;
   background-color: #172233;
   border-color: #172233; }
+
+.form-width {
+  width: 50%;
+  float: left; }
 
 /*# sourceMappingURL=style.css.map */

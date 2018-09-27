@@ -1,53 +1,104 @@
-<h1>Crea un nuevo torneo</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="/stylesheets/style.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Exo:400,400i,600,600i,700,700i" rel="stylesheet">
+  <title>TeamMates</title>
+</head>
+<body>
+<div id="homepage-background">
+  <div class ="container">
+    <div id="header">
+<div class="logo">
+    <img src="/images/Logo.png" alt="">
+</div>
+<div>
+<div class="social-media">
+    <span><i class="fab fa-facebook-f"></i></span>
+    <span><i class="fab fa-twitter"></i></span>
+    <span><i class="fab fa-instagram"></i></span>
+</div>
+<nav>
+  <ul>
+    <li>Nosotros</li>
+    <li>Como funciona?</li>
+    <li>Preguntas frecuentes</li>
+    <li>Contacto</li>
+    <li>Login</li>
+  </ul>
+</nav>
+</div>
+    </div>
+<section class="sign-up-container">
+<div id="sign-up">
+  <h1>Crea un Torneo</h1>
 <form action="/partidos/torneoNew" method="POST">
+<div class="form-width">
   <p>
-    title:
-    <input type="text" name="title" id="" >
+    <input type="text" name="title" id="" placeholder="Nombre del Amistoso" >
   </p>
+  </div>
+  <div class="form-width">
   <p>
-    Descripcion:
-    <input type="text" name="description" id="">
+    <input type="text" name="description" id="" placeholder="Descripcion">
   </p>
+  </div>
+  <div class="form-width">
   <p>
-    Rules:
-    <input type="text" name="rules" id="">
+    <input type="text" name="rules" id="" placeholder="Reglas">
   </p>
+  </div>
+  <div class="form-width">
   <p>
-    Fecha:
+    Fecha:<br/>
     <input type="date" name="date" id="">
   </p>
+  </div>
+  <div class="form-width">
   <p>
-    Hora:
+    Hora:<br/>
     <input type="time" name="time" id="">
   </p>
+  </div>
+  <div class="form-width">
   <p>
-    Direccion:
+    Direccion: <br/>
     <input type="text" name="location[address]" id="address">
   </p>
+  </div>
+  {{!-- <div class="form-width">
   <p>
     Latitud:
     <input type="text" name="location[coordinates][1]" id="lat">
   </p>
+  </div>
+  <div class="form-width">
   <p>
     Longitud:
     <input type="text" name="location[coordinates][0]" id="lng">
   </p>
+  </div> --}}
+  <div class="form-width">
   <p>
-    Precio:
-    <input type="text" name="price" id="">
+    <input type="text" name="price" id="" placeholder="Valor Inscripcion">
   </p>
+  </div>
+  <div class="form-width">
   <p>
-    Premio:
-    <input type="text" name="prize" id="">
+    <input type="text" name="prize" id="" placeholder="Premio al Ganador">
   </p>
-  <p>
-    Comentarios:
+  </div>
+  {{!-- <p>
+    Comentarios:<br/>
     <textarea name="comments" id="" cols="0" rows="10"></textarea>
-  </p>
+  </p> --}}
 
   <button type="submit">Crear Torneo</button>
 </form>
-
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8o46KiOg4PdiJ8WCRXC9KyFfE4d-g0Qw&libraries=places"></script>
@@ -67,3 +118,26 @@
   }
   autoComplete(address,lat,lng)
 </script>
+</div>
+</section>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
