@@ -300,12 +300,15 @@ input {
 #profile-buttons {
   height: auto;
   min-height: 350px;
-  background: #172233; }
+  background: #172233;
+  width: 100vw; }
 
 .profile-buttons {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; }
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto; }
 
 .button-text {
   position: absolute;
@@ -367,5 +370,8 @@ input {
 
 .funcion-info h3 {
   color: #fff; }
+
+#buttons {
+  background: #172233; }
 
 /*# sourceMappingURL=style.css.map */
