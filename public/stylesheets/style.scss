@@ -43,6 +43,11 @@ nav li {
   margin: 0 15px;
   color: #fff;
   font-size: 16px;
+  font-weight: 700;
+}
+
+footer nav li {
+  color: #172233;
 }
 
 nav {
@@ -60,7 +65,7 @@ nav {
 }
 
 .container{
-  width:1400px;
+  width:1200px;
   margin:0 auto;
 }
 
@@ -151,7 +156,7 @@ i.fas.fa-arrow-down {
   justify-content: space-around;
   align-items: center;
   flex-wrap:wrap;
-  width: 1400px;
+  width: 1200px;
     margin: 0 auto;
 }
 
@@ -200,7 +205,7 @@ i.fas.fa-arrow-down {
 .funcion-info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 30px;
 }
 
@@ -321,7 +326,7 @@ input {
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap:wrap;
-  width: 1400px;
+  width: 1200px;
     margin: 0 auto;
 }
 
@@ -345,10 +350,14 @@ input {
 
 .profile-info {
   flex: 3;
-
+  padding: 15px;
+}
+.cup-img {
+  flex: 4;
 }
 .profile-games {
   flex: 3;
+  padding: 15px;
 }
 
 #profile-buttons{
@@ -420,4 +429,18 @@ input {
 .form-width {
   width: 50%;
   float: left;
+}
+
+.footer-container{
+  width:1200px;
+  margin:0 auto;
+}
+
+.funcion-info i {
+  font-size: 60px;
+  color: #f7bf34;
+}
+
+.funcion-info h3 {
+  color: #fff;
 }

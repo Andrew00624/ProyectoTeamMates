@@ -37,7 +37,11 @@ nav li {
   display: inline-flex;
   margin: 0 15px;
   color: #fff;
-  font-size: 16px; }
+  font-size: 16px;
+  font-weight: 700; }
+
+footer nav li {
+  color: #172233; }
 
 nav {
   text-align: right;
@@ -52,7 +56,7 @@ nav {
   margin: 0 5px; }
 
 .container {
-  width: 1400px;
+  width: 1200px;
   margin: 0 auto; }
 
 .logo img {
@@ -130,7 +134,7 @@ i.fas.fa-arrow-down {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 1400px;
+  width: 1200px;
   margin: 0 auto; }
 
 .registro-container img {
@@ -171,7 +175,7 @@ i.fas.fa-arrow-down {
 .funcion-info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 30px; }
 
 footer {
@@ -263,7 +267,7 @@ input {
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  width: 1400px;
+  width: 1200px;
   margin: 0 auto; }
 
 .profile-edit-container {
@@ -283,10 +287,15 @@ input {
   margin-left: 50px; }
 
 .profile-info {
-  flex: 3; }
+  flex: 3;
+  padding: 15px; }
+
+.cup-img {
+  flex: 4; }
 
 .profile-games {
-  flex: 3; }
+  flex: 3;
+  padding: 15px; }
 
 #profile-buttons {
   height: auto;
@@ -347,5 +356,16 @@ input {
 .form-width {
   width: 50%;
   float: left; }
+
+.footer-container {
+  width: 1200px;
+  margin: 0 auto; }
+
+.funcion-info i {
+  font-size: 60px;
+  color: #f7bf34; }
+
+.funcion-info h3 {
+  color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
