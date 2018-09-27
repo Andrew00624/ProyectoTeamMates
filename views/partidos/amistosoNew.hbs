@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="/stylesheets/style.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Exo:400,400i,600,600i,700,700i" rel="stylesheet">
+  <title>TeamMates</title>
+</head>
+<body>
+<div id="homepage-background">
+  <div class ="container">
+    <div id="header">
+<div class="logo">
+      <a href="/"><img src="/images/Logo.png" alt=""></a>  
+</div>
+<div>
+<div class="social-media">
+    <span><i class="fab fa-facebook-f"></i></span>
+    <span><i class="fab fa-twitter"></i></span>
+    <span><i class="fab fa-instagram"></i></span>
+</div>
+<nav>
+  <ul>
+    <li>Nosotros</li>
+    <li>Como funciona?</li>
+    <li>Preguntas frecuentes</li>
+    <li>Contacto</li>
+    <li>Login</li>
+  </ul>
+</nav>
+</div>
+    </div>
+<section class="sign-up-container">
+<div id="sign-up">
+  <h1>Crea un Amistoso</h1>
+<form action="/partidos/amistosoNew" method="POST">
+<div class="form-width">
+  <p>
+    <input type="text" name="title" id="" placeholder="Nombre del amistoso">
+  </p>
+  </div>
+  <div class="form-width">
+  <p>
+    <input type="text" name="description" id="" placeholder="Descripcion">
+  </p>
+  </div>
+  <div class="form-width">
+  <p>
+    <input type="text" name="rules" id="" placeholder="Reglas">
+  </p>
+  </div>
+  <div class="form-width">
+  <p>
+    Fecha:<br>
+    <input type="date" name="date" id="">
+  </p>
+  </div>
+  <div class="form-width">
+  <p>
+    Hora:<br>
+    <input type="time" name="time" id="">
+  </p>
+  </div>
+  <div class="form-width">
+  <p>
+    Direccion:<br>
+    <input type="text" name="location[address]" id="address">
+  </p>
+  </div>
+  <div class="form-width">
+  <p>
+    Latitud:
+    <input type="text" name="location[coordinates][1]" id="lat">
+  </p>
+  </div>
+  <div class="form-width">
+  <p>
+    Longitud:
+    <input type="text" name="location[coordinates][0]" id="lng">
+  </p>
+  </div>
+  <button type="submit">Crear Amistoso</button>
+</form>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8o46KiOg4PdiJ8WCRXC9KyFfE4d-g0Qw&libraries=places"></script>
+
+<script>
+  const address = document.getElementById('address')
+  const lat = document.getElementById('lat')
+  const lng = document.getElementById('lng')
+  function autoComplete(addressInput,latInput,lngInput){
+    const dropdown =  new google.maps.places.Autocomplete(addressInput)
+    dropdown.addListener('place_changed',()=>{
+      const place = dropdown.getPlace()
+      console.log (place)
+      lat.value = place.geometry.location.lat()
+      lng.value = place.geometry.location.lng()
+    })
+  }
+  autoComplete(address,lat,lng)
+</script>
+</div>
+</section>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

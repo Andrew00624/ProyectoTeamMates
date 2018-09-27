@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="/stylesheets/style.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Exo:400,400i,600,600i,700,700i" rel="stylesheet">
+  <title>TeamMates</title>
+</head>
+<body>
+<div id="homepage-background">
+  <div class ="container">
+    <div id="header">
+<div class="logo">
+      <a href="/"><img src="/images/Logo.png" alt=""></a>  
+</div>
+<div>
+<div class="social-media">
+    <span><i class="fab fa-facebook-f"></i></span>
+    <span><i class="fab fa-twitter"></i></span>
+    <span><i class="fab fa-instagram"></i></span>
+</div>
+<nav>
+  <ul>
+    <li>Nosotros</li>
+    <li>Como funciona?</li>
+    <li>Preguntas frecuentes</li>
+    <li>Contacto</li>
+    <li>Login</li>
+  </ul>
+</nav>
+</div>
+    </div>
+<section class="sign-up-container">
+<div id="sign-up">
+<div>
+  <h1>Nuevo <span>Fichaje</span> </h1>
+<p>Registrate y forma parte de nuestro equipo titular</p>
+<form action="/signup" method="post">
+  <p>
+    <input name="username" type="text" placeholder="Nombre de usuario">
+  </p>
+  <p>
+    <input name="email" type="email" placeholder="Correo Electronico">
+  </p>
+  <p>
+    <input name="password" type="password" placeholder="Contrasena">
+  </p>
+  <p>
+    <input name="position" type="text" placeholder="Posicion en el campo">
+  </p>
+  <button type = "submit">Registrarse</button>
+</form>
+<br/>
+<button id="button">Registrate con facebook</button>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyALgAE8f0BzFz8kb_-DYOf4mFtRTTkrIjQ",
+    authDomain: "teamm-9bdad.firebaseapp.com",
+    databaseURL: "https://teamm-9bdad.firebaseio.com",
+    projectId: "teamm-9bdad",
+    storageBucket: "teamm-9bdad.appspot.com",
+    messagingSenderId: "509760892262"
+  };
+
+
+document.getElementById('button').addEventListener('click', () => {
+  firebase.initializeApp(config);
+  var provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+  .then(function(result) {
+    var token = result.credential.accessToken;
+    var user = result.user;
+    console.log(user)
+    const createUser = (body) => {
+      return fetch('http://localhost:3000/create', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+      })  
+    }
+    createUser({username: user.displayName, email: user.email, photoURL: user.photoURL})
+    .then(result => {
+      window.location.href= '/profile' 
+    })
+    .catch(error => console.log(error))
+  })
+  .catch(function(error) {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    var email = error.email;
+    var credential = error.credential;
+});
+})
+</script>
+
+</div>
+</div>
+</section>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
+</body>
+</html>
