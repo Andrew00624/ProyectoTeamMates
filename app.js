@@ -12,8 +12,18 @@ const session = require('express-session')
 const passport = require('./helpers/passport')
 
 
+// mongoose
+//   .connect('mongodb://localhost/teammates', {useNewUrlParser: true})
+//   .then(x => {
+//     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+//   })
+//   .catch(err => {
+//     console.error('Error connecting to mongo', err)
+//   });
+
+
 mongoose
-  .connect('mongodb://localhost/teammates', {useNewUrlParser: true})
+  .connect(procces.env.DB, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
