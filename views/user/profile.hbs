@@ -10,4 +10,26 @@
 
 
 
- 
+
+<h1>Califica a tu jugador</h1>
+<p>Mueve el raton para dar calificación</p>
+<div class="stars">
+  <div class="rank"></div>
+  <div class="score">0</div>
+</div>
+
+
+
+<script>
+
+document.querySelector('.stars').
+  addEventListener('click', function(e){
+    var x = e.pageX;
+    var elLeft = this.offsetLeft;
+    var elWidth = this.offsetWidth;
+    var rank = Math.ceil( 100 * (x - elLeft) / elWidth );
+    this.querySelector('.rank').style.width = rank+'%'; 
+    this.querySelector('.score').innerHTML = rank;
+  });
+
+</script>

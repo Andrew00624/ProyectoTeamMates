@@ -15,6 +15,16 @@ const tournamentSchema = new Schema({
   prize:String,
   price:String,
   schedule:String,
+  location:{
+    type:{
+      type:String,
+      default:'point'
+    },
+    address:String,
+    coordinates:[{
+      type:Number
+    }]
+  },
   comments:String,
   participants:[{
     type:Schema.Types.ObjectId,

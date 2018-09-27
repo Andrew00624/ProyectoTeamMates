@@ -19,7 +19,7 @@
       <th>Nombre del Torneo</th>
       <th>Descripcion</th>
       <th>Lugar</th>
-      <th>Ver mas</th>
+      <th> Ver mas</th>
     </tr>
   </thead>
   <tbody>
@@ -28,10 +28,9 @@
   <th scope="row">{{this.title}}</th>
   <td>{{this.description}}</td>
   <td>{{this.price}}</td>
-  <td>{{this.date}}</td>
+  <td><a href="/partidos/detalle-torneo/{{this.id}}"> Detalles</a></td>
 </tr>
 {{/each}} 
-
 </tbody>
  </table>
   </div>
@@ -51,7 +50,7 @@
   <th scope="row">{{this.title}}</th>
   <td>{{this.description}}</td>
   <td>{{this.price}}</td>
-  <td>{{this.date}}</td>
+  <td>{{this.participants}}</td>
 </tr>
 {{/each}} 
 </tbody>

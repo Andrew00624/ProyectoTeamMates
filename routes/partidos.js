@@ -56,10 +56,26 @@ router.get('/juegos',(req, res, next)=>{
 })
 
 
+// Detail
 
+router.get("/detalle-torneo/:id",(req,res,next)=>{
+  const {id} = req.params
+  const {user} = req
+  Tournament.findById(id)
+  .then(tournament=>{
+    res.render("partidos/detalle-torneo",tournament)
+  }).catch(e=>next(e))
+ })
 
-
-
-
+ router.post('/detalle-torneo/:id', (req, res) => {
+  const {_id} = req.user
+  console.log()
+  Tournament.findByIdAndUpdate(req.params.id, {$push:{participants: _id}}, {new:true})
+  .then(tournament => {
+    console.log(tournament)
+      res.redirect('/partidos/juegos')
+  }).catch(error => next(error))
+   
+ })
 
 module.exports = router

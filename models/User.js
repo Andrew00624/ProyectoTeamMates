@@ -12,7 +12,9 @@ const userSchema = new Schema({
   password: String,
   position:String,
   photoURL:String,
-  rating:[],
+  rating:[{
+    
+  }],
   tournament:[{
     type:Schema.Types.ObjectId,
     ref:'Tournament'
