@@ -14,11 +14,6 @@
 
 <div id ="innerpages-hero">
   <div class="container">
-    <div class="social-media">
-          <span><i class="fab fa-facebook-f"></i></span>
-          <span><i class="fab fa-twitter"></i></span>
-          <span><i class="fab fa-instagram"></i></span>
-      </div>
       <div id="header">
           <div class="logo">
                 <a href="/"><img src="https://res.cloudinary.com/dqdpblijd/image/upload/v1538098203/teammates/Logo.png" alt=""></a>  
@@ -65,13 +60,12 @@
     <h4>Reglas</h4>
     <p>{{this.rules}}</p>
     <h4>Premio al ganador</h4>
-    <p>{{this.prize}}</p>
+    <p>${{this.prize}}</p>
     <h4>Fecha de inicio</h4>
     <p>{{this.schedule}}</p>
     <h4>Hora</h4>
     <p>{{this.time}}</p>
     <h4>Participantes</h4>
-    
     {{#each this.participants}}
       <span>  <a href="/user/profile/{{thi.id}}">{{this.username}},</span></a>
     {{/each}}

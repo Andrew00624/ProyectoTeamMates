@@ -14,11 +14,6 @@
 
 <div id ="innerpages-hero">
   <div class="container">
-    <div class="social-media">
-          <span><i class="fab fa-facebook-f"></i></span>
-          <span><i class="fab fa-twitter"></i></span>
-          <span><i class="fab fa-instagram"></i></span>
-      </div>
       <div id="header">
           <div class="logo">
                 <a href="/"><img src="https://res.cloudinary.com/dqdpblijd/image/upload/v1538098203/teammates/Logo.png" alt=""></a>  
@@ -44,7 +39,6 @@
 
 <section id="profile">
 <div class="profile-container">
-
   <div class="cup-img">
     <img src="https://res.cloudinary.com/dqdpblijd/image/upload/v1538098204/teammates/player2.png" alt="" style="width: 380px;">
   </div>
@@ -55,6 +49,9 @@
     <p>{{this.description}}</p>
     <h4>Dirección</h4>
     <p>{{this.location.address}}</p>
+    <form action="/partidos/detalle-amistoso/{{this._id}}" method="POST">
+        <button type="submit">Registrarse</button> 
+    </form>
   </div>  
   <div class="profile-games">
     <h4>Reglas</h4>
@@ -62,10 +59,9 @@
     <h4>Fecha de inicio</h4>
     <p>{{this.date}}</p>
     <h4>Participantes</h4>
-    <p>{{this.participants}}</p>
-    <form action="/partidos/detalle-amistoso/{{this._id}}" method="POST">
-        <button type="submit">Registrarse</button> 
-    </form>
+    {{#each this.participants}}
+      <span>  <a href="/user/profile/{{thi.id}}">{{this.username}},</span></a>
+    {{/each}}
   </div>
 </div>
 </section>

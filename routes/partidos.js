@@ -74,7 +74,7 @@ router.get("/detalle-torneo/:id",(req,res,next)=>{
  router.get("/detalle-amistoso/:id",(req,res,next)=>{
   const {id} = req.params
   const {user} = req
-  FriendlyGame.findById(id)
+  FriendlyGame.findById(id).populate('participants')
   .then(Friendly=>{
     res.render("partidos/detalle-amistoso",Friendly)
   }).catch(e=>next(e))
