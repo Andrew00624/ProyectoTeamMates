@@ -2,6 +2,13 @@ body {
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0px; }
 
+body#torneo-new, body#torneo-new {
+  background-image: url(/images/background.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%; }
+
 html {
   scroll-behavior: smooth; }
 
@@ -210,7 +217,7 @@ footer {
 
 #sign-up, #login {
   background: #1e2d42bd;
-  padding: 40px; }
+  padding: 50px 0 60px 0; }
 
 input {
   padding: 13px;
@@ -221,8 +228,7 @@ input {
   position: absolute;
   left: 0;
   right: 0;
-  top: 30%;
-  bottom: 50%;
+  top: 23%;
   width: 800px;
   margin: 0 auto;
   text-align: center; }
@@ -373,6 +379,10 @@ input {
 
 #buttons {
   background: #172233; }
+
+#buttons .col-md-3 {
+  padding-left: 0px;
+  padding-right: 0px; }
 
 @media only screen and (max-width: 1281px) {
   .button-text h2 {
