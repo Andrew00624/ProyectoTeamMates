@@ -374,4 +374,8 @@ input {
 #buttons {
   background: #172233; }
 
+@media only screen and (max-width: 1281px) {
+  .button-text h2 {
+    font-size: 2rem; } }
+
 /*# sourceMappingURL=style.css.map */
