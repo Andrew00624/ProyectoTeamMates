@@ -18,11 +18,11 @@ exports.sendMail = (email,username)=>{
     text:'',
     html:`
 
-    <img src="https://res.cloudinary.com/dqdpblijd/image/upload/v1538098203/teammates/Logo.png">
+    <img src="https://res.cloudinary.com/dqdpblijd/image/upload/v1538104514/teammates/Logo2.png">
     
         <h1>Hola ${username} bienvenido al equipo titular Team Mates</h1>
         
-        <p>Ahora formas parte de la comunidad más grande de jugadores aficionados de futbol. </p>
+        <p>Ahora formas parte de la comunidad más grande de jugadores aficionados de fútbol. </p>
         <p>Podrás crear partidos amistosos, torneos y asistir a los diferentes eventos creados por jugadores como tú.</p>
         
         <h3>Nos vemos en las canchas :)</h3>`
