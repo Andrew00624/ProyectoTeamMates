@@ -12,22 +12,22 @@ const transporter = nodemailer.createTransport ({
 
 exports.sendMail = (email,username)=>{
   transporter.sendMail({
-    from:'Nueva App',
+    from:'Equipo Team Mates',
     to:email,
-    subject:'Bienvenido a nuestra app',
-    text:'lorem ipsum',
+    subject:'Registro Team Mates',
+    text:'',
     html:`
 
-    <img src="https://joseramonsahuquillo.com/wp-content/uploads/2016/10/ironhack.png">
+    <img src="https://res.cloudinary.com/dqdpblijd/image/upload/v1538098203/teammates/Logo.png">
     
-        <h1>Ironhack confirmation Email</h1>
+        <h1>Hola ${username} bienvenido al equipo titular Team Mates</h1>
         
-        <h3>Hello ${username} </h3>
+        <p>Ahora formas parte de la comunidad más grande de jugadores aficionados de futbol. </p>
+        <p>Podrás crear partidos amistosos, torneos y asistir a los diferentes eventos creados por jugadores como tú.</p>
         
-        <p>Thanks to join, please confirm your account clicking on the following link:</p>
-        
-        <h2>Great to see you creating awesome webpages with us ! :)</h2>`
+        <h3>Nos vemos en las canchas :)</h3>`
   })
   .then (info => console.log (info))
   .catch (e=>console.log (e))
 }
+
