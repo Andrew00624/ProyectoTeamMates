@@ -26,10 +26,11 @@
 <nav>
   <ul>
     <li>Nosotros</li>
-    <li>Como funciona?</li>
+    <li>¿Cómo funciona?</li>
     <li>Preguntas frecuentes</li>
     <li>Contacto</li>
-    <li>Login</li>
+    <li> <a href="/user/profile"> Mi perfil</a></li>
+    <li> <a href="/login"> Login </a></li>
   </ul>
 </nav>
 </div>
@@ -45,11 +46,11 @@
   <h1>Edita tu perfil</h1>
 <form action="/user/edit" method="post" enctype="multipart/form-data">
   <p>
-    Nombre de usuario:<br/>
+    Nombre de usuario<br/>
     <input name="username" type="text" value="{{username}}">
   </p>
   <p>
-    Posicion en el campo:<br/>
+    Posición en el campo<br/>
     <input name="position" type="text" value ="{{position}}">
   </p>
   <p>
@@ -66,7 +67,7 @@
   <div class="profile-buttons">
     <a href="/partidos/juegos/">
     <div class="button-1">
-    <div class="button-text"> <h2>Inscribete en un <br><span>Juego</span> </h2></div>   
+    <div class="button-text"> <h2>Inscríbete en un <br><span>Juego</span> </h2></div>   
       <img src="/images/button1.png" alt="">
       </a>
     </div>
@@ -90,7 +91,7 @@
       <nav>
   <ul>
     <li>Nosotros</li>
-    <li>Como funciona?</li>
+    <li>¿Cómo funciona?</li>
     <li>Preguntas frecuentes</li>
     <li>Contacto</li>
     <li>Login</li>

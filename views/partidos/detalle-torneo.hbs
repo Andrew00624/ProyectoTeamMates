@@ -26,13 +26,15 @@
 <nav>
   <ul>
     <li>Nosotros</li>
-    <li>Como funciona?</li>
+    <li>¿Cómo funciona?</li>
     <li>Preguntas frecuentes</li>
     <li>Contacto</li>
-    <li>Login</li>
+    <li> <a href="/user/profile"> Mi perfil</a></li>
+    <li> <a href="/login"> Login </a></li>
   </ul>
 </nav>
 </div>
+
 <div class="inner-title">
  <h1>{{{this.title}}}</h1> 
 </div>
@@ -47,13 +49,13 @@
     <img src="/images/cup.png" alt="" style="width: 375px;">
   </div>
   <div class="profile-info">
-    <h4>Nombre del Torneo:</h4>
+    <h4>Nombre del Torneo</h4>
     <p>{{this.title}}</p>
-    <h4>Descripcion:</h4>
+    <h4>Descripción</h4>
     <p>{{this.description}}</p>
-    <h4>Direccion:</h4>
+    <h4>Dirección</h4>
     <p>{{this.location.address}}</p>
-    <h4>Valor de inscripcion:</h4>
+    <h4>Valor de inscripción</h4>
     <p>${{this.price}}</p>
     <form action="/partidos/detalle-torneo/{{this._id}}" method="POST">
         <button type="submit">Registrarse</button> 
@@ -86,13 +88,14 @@
       <nav>
   <ul>
     <li>Nosotros</li>
-    <li>Como funciona?</li>
+    <li>¿Cómo funciona?</li>
     <li>Preguntas frecuentes</li>
     <li>Contacto</li>
     <li>Login</li>
   </ul>
 </nav>
 </div>
+
 </footer>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJuHH2jP3PIpI1FVuWijujzw41ZrVgPwU"></script>
 <script>
