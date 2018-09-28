@@ -3,7 +3,7 @@ body {
   margin: 0px; }
 
 body#torneo-new, body#torneo-new {
-  background-image: url(/images/background.jpg);
+  background-image: url("https://res.cloudinary.com/dqdpblijd/image/upload/v1538098203/teammates/background.jpg");
   background-size: auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -134,7 +134,7 @@ button a, button a:hover {
 
 #homepage-background {
   position: relative;
-  background-image: url(/images/background.jpg);
+  background-image: url("https://res.cloudinary.com/dqdpblijd/image/upload/v1538098203/teammates/background.jpg");
   background-size: cover;
   height: 100vh;
   background-position: 50% 50%; }
@@ -150,7 +150,7 @@ i.fas.fa-arrow-down {
 
 #registrarse {
   position: relative;
-  background-image: url(/images/section1.png);
+  background-image: url("https://res.cloudinary.com/dqdpblijd/image/upload/v1538098204/teammates/section1.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: auto;
@@ -255,7 +255,7 @@ input {
 
 #innerpages-hero {
   position: relative;
-  background-image: url(/images/background.jpg);
+  background-image: url("https://res.cloudinary.com/dqdpblijd/image/upload/v1538098203/teammates/background.jpg");
   background-size: cover;
   height: 450px;
   background-position: 50% 50%; }
@@ -274,7 +274,7 @@ input {
 
 #profile {
   position: relative;
-  background-image: url(/images/section1.png);
+  background-image: url("https://res.cloudinary.com/dqdpblijd/image/upload/v1538098204/teammates/section1.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: auto;
@@ -283,7 +283,7 @@ input {
 
 #profile-edit {
   position: relative;
-  background-image: url(/images/section1.png);
+  background-image: url("https://res.cloudinary.com/dqdpblijd/image/upload/v1538098204/teammates/section1.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: auto;
